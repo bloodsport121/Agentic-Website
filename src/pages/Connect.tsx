@@ -54,7 +54,7 @@ END:VCARD`;
       setSubmitted(true);
       setIsSubmitting(false);
       setContactMethod('text');
-      
+
       // Reset success message after a few seconds
       setTimeout(() => setSubmitted(false), 5000);
     }, 1500);
@@ -64,9 +64,9 @@ END:VCARD`;
     <div className="pt-24 pb-24 px-6 min-h-screen bg-[#050505] flex justify-center">
       {/* Mobile-optimized container */}
       <div className="w-full max-w-md">
-        
+
         {/* Profile Header */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="mb-12"
@@ -77,9 +77,9 @@ END:VCARD`;
               <div className="relative inline-block mb-4">
                 <div className="w-28 h-28 md:w-32 md:h-32 rounded-full overflow-hidden border-2 border-orange-500/50 p-1">
                   <div className="w-full h-full rounded-full bg-zinc-800 overflow-hidden">
-                    <img 
-                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop" 
-                      alt="Justin Gramke" 
+                    <img
+                      src="/Agentic-Website/headshot.jpg"
+                      alt="Justin Gramke"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -95,9 +95,9 @@ END:VCARD`;
               <div className="relative inline-block mb-4">
                 <div className="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden border-2 border-orange-500/30 p-1">
                   <div className="w-full h-full rounded-full bg-zinc-800 overflow-hidden">
-                    <img 
-                      src="https://i.seadn.io/gae/yNi-XdGxsgQCPpqSio4o31ygAV6wjc54pniMG8qgirj3XKNWKcg4PDq2vw0DVkGjSQ_qA1fPgcZsyclGqlcaCbShz-sOAEjl5CbZOA?auto=format&w=400" 
-                      alt="Grams" 
+                    <img
+                      src="/Agentic-Website/penguin.jpg"
+                      alt="Grams"
                       className="w-full h-full object-cover opacity-80"
                     />
                   </div>
@@ -107,20 +107,20 @@ END:VCARD`;
               <p className="text-orange-500 text-[10px] md:text-xs font-medium uppercase tracking-wider h-6 flex items-center justify-center">Pudgy Penguin #4860</p>
             </div>
           </div>
-          
+
           <p className="text-zinc-400 text-sm leading-relaxed px-4 mt-16 text-center">
             Bridging the gap between decentralized agentic systems and institutional compliance frameworks.
           </p>
         </motion.div>
 
         {/* Primary Action: Save to Contacts */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
           className="mb-8"
         >
-          <button 
+          <button
             onClick={handleSaveContact}
             className="w-full py-4 rounded-2xl bg-gradient-to-r from-orange-400 to-orange-600 text-black font-semibold flex items-center justify-center gap-2 hover:opacity-90 transition-opacity shadow-[0_0_20px_rgba(255,107,0,0.2)]"
           >
@@ -130,7 +130,7 @@ END:VCARD`;
         </motion.div>
 
         {/* Quick Links Grid */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
@@ -163,14 +163,14 @@ END:VCARD`;
         </motion.div>
 
         {/* Book a Meeting */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
           className="mb-8"
         >
-          <a 
-            href="#" 
+          <a
+            href="#"
             className="w-full p-4 rounded-2xl bg-[#141414] border border-white/5 hover:border-orange-500/30 transition-colors flex items-center justify-between group"
           >
             <div className="flex items-center gap-3">
@@ -189,7 +189,7 @@ END:VCARD`;
         </motion.div>
 
         {/* Exchange Contact Form */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
@@ -197,7 +197,7 @@ END:VCARD`;
         >
           <h3 className="text-lg font-medium mb-2">Exchange Contact Info</h3>
           <p className="text-sm text-zinc-400 mb-4">Drop your details and I'll send you a quick "Nice to meet you" message.</p>
-          
+
           {submitted ? (
             <div className="bg-green-500/10 border border-green-500/20 rounded-xl p-4 text-center text-green-400 text-sm font-medium">
               Thanks! I'll be in touch shortly.
@@ -209,12 +209,12 @@ END:VCARD`;
                   {error}
                 </div>
               )}
-              
-              <input 
-                type="text" 
+
+              <input
+                type="text"
                 value={formData.name}
-                onChange={(e) => setFormData({...formData, name: e.target.value})}
-                placeholder="Your Name" 
+                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                placeholder="Your Name"
                 className="w-full bg-[#0a0a0a] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-orange-500 transition-colors"
               />
 
@@ -223,11 +223,10 @@ END:VCARD`;
                   type="button"
                   onClick={() => setContactMethod('text')}
                   aria-pressed={contactMethod === 'text'}
-                  className={`flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-medium transition-colors border ${
-                    contactMethod === 'text' 
-                      ? 'bg-orange-500/10 border-orange-500/50 text-orange-500' 
+                  className={`flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-medium transition-colors border ${contactMethod === 'text'
+                      ? 'bg-orange-500/10 border-orange-500/50 text-orange-500'
                       : 'bg-[#0a0a0a] border-white/10 text-zinc-400 hover:border-white/30 hover:text-zinc-300'
-                  }`}
+                    }`}
                 >
                   <MessageCircle className="w-4 h-4" /> Text
                 </button>
@@ -235,11 +234,10 @@ END:VCARD`;
                   type="button"
                   onClick={() => setContactMethod('telegram')}
                   aria-pressed={contactMethod === 'telegram'}
-                  className={`flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-medium transition-colors border ${
-                    contactMethod === 'telegram' 
-                      ? 'bg-orange-500/10 border-orange-500/50 text-orange-500' 
+                  className={`flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-medium transition-colors border ${contactMethod === 'telegram'
+                      ? 'bg-orange-500/10 border-orange-500/50 text-orange-500'
                       : 'bg-[#0a0a0a] border-white/10 text-zinc-400 hover:border-white/30 hover:text-zinc-300'
-                  }`}
+                    }`}
                 >
                   <Send className="w-4 h-4" /> Telegram
                 </button>
@@ -247,11 +245,10 @@ END:VCARD`;
                   type="button"
                   onClick={() => setContactMethod('email')}
                   aria-pressed={contactMethod === 'email'}
-                  className={`flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-medium transition-colors border ${
-                    contactMethod === 'email' 
-                      ? 'bg-orange-500/10 border-orange-500/50 text-orange-500' 
+                  className={`flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-medium transition-colors border ${contactMethod === 'email'
+                      ? 'bg-orange-500/10 border-orange-500/50 text-orange-500'
                       : 'bg-[#0a0a0a] border-white/10 text-zinc-400 hover:border-white/30 hover:text-zinc-300'
-                  }`}
+                    }`}
                 >
                   <Mail className="w-4 h-4" /> Email
                 </button>
@@ -260,11 +257,11 @@ END:VCARD`;
               <div className="space-y-1">
                 {contactMethod === 'text' && (
                   <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }}>
-                    <input 
-                      type="tel" 
+                    <input
+                      type="tel"
                       value={formData.text}
-                      onChange={(e) => setFormData({...formData, text: e.target.value})}
-                      placeholder="Phone number (e.g., +1234567890)" 
+                      onChange={(e) => setFormData({ ...formData, text: e.target.value })}
+                      placeholder="Phone number (e.g., +1234567890)"
                       className="w-full bg-[#0a0a0a] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-orange-500 transition-colors"
                     />
                     <p className="text-xs text-zinc-500 px-1 mt-2">We'll text you.</p>
@@ -272,11 +269,11 @@ END:VCARD`;
                 )}
                 {contactMethod === 'telegram' && (
                   <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }}>
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
                       value={formData.telegram}
-                      onChange={(e) => setFormData({...formData, telegram: e.target.value})}
-                      placeholder="Telegram handle (e.g., @username)" 
+                      onChange={(e) => setFormData({ ...formData, telegram: e.target.value })}
+                      placeholder="Telegram handle (e.g., @username)"
                       className="w-full bg-[#0a0a0a] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-orange-500 transition-colors"
                     />
                     <p className="text-xs text-zinc-500 px-1 mt-2">We'll message you on Telegram.</p>
@@ -284,11 +281,11 @@ END:VCARD`;
                 )}
                 {contactMethod === 'email' && (
                   <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }}>
-                    <input 
-                      type="email" 
+                    <input
+                      type="email"
                       value={formData.email}
-                      onChange={(e) => setFormData({...formData, email: e.target.value})}
-                      placeholder="Email address (e.g., name@example.com)" 
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      placeholder="Email address (e.g., name@example.com)"
                       className="w-full bg-[#0a0a0a] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-orange-500 transition-colors"
                     />
                     <p className="text-xs text-zinc-500 px-1 mt-2">We'll email you.</p>
@@ -296,7 +293,7 @@ END:VCARD`;
                 )}
               </div>
 
-              <button 
+              <button
                 type="submit"
                 disabled={isSubmitting}
                 className="w-full py-3 rounded-xl bg-white text-black text-sm font-semibold flex items-center justify-center gap-2 hover:bg-zinc-200 transition-colors mt-4 disabled:opacity-70 disabled:cursor-not-allowed"
@@ -320,7 +317,7 @@ END:VCARD`;
         </motion.div>
 
         {/* Social Proof */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
