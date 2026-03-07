@@ -7,7 +7,7 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '');
   return {
     plugins: [react(), tailwindcss()],
-    base: '/Agentic-Website/',
+    base: '/AgenticRVR/',
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),

@@ -22,7 +22,7 @@ import AgenticReplies from './pages/AgenticReplies';
 
 export default function App() {
   return (
-    <Router basename="/Agentic-Website">
+    <Router basename="/AgenticRVR">
       <ScrollToTop />
       <div className="min-h-screen bg-[#050505] text-white selection:bg-orange-500/30">
         <Navbar />
