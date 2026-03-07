@@ -32,7 +32,7 @@ export default function SpeedToLead() {
             to="/contact"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-black font-medium hover:bg-zinc-200 transition-colors"
           >
-            Deploy Your Agent <ArrowRight className="w-4 h-4" />
+            Hire This Agent <ArrowRight className="w-4 h-4" />
           </Link>
         </motion.div>
 
